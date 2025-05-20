@@ -59,7 +59,7 @@ function scrapeHinduSection(url, category) {
                     const cleanedDate = rawDateText.replace(/\s*IST\s*.*$/, "").trim();
                     const parsedDate = new Date(cleanedDate);
                     if (isNaN(parsedDate.getTime())) {
-                        console.warn(`❌ Invalid date: ${rawDateText}`);
+                        console.warn(`Invalid date: ${rawDateText}`);
                         continue;
                     }
                     const newsData = {
@@ -91,7 +91,7 @@ function scrapeHinduSection(url, category) {
             if (browser) {
                 yield browser.close();
             }
-            console.log(`✅ Scraping completed for ${category}`);
+            console.log(`Scraping completed for ${category}`);
         }
     });
 }

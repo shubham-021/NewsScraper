@@ -21,7 +21,7 @@ app.get('/api/articles/:date', async (req, res) => {
     );
 
 
-    res.json(filtered.slice(0,limit));
+    res.json(filtered);
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: "Something went wrong" });
